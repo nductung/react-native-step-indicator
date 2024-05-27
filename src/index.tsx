@@ -169,7 +169,7 @@ const StepIndicator = ({
 
   const renderProgressBar = () => {
     let progressBarStyle: any = {
-      backgroundColor: customStyles.separatorFinishedColor,
+      backgroundColor: 'red',
       position: 'absolute',
     };
     if (direction === 'vertical') {
