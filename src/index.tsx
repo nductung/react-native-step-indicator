@@ -169,7 +169,7 @@ const StepIndicator = ({
 
   const renderProgressBar = () => {
     let progressBarStyle: any = {
-      backgroundColor: 'red',
+      backgroundColor: customStyles.separatorFinishedColor,
       position: 'absolute',
     };
     if (direction === 'vertical') {
@@ -189,12 +189,13 @@ const StepIndicator = ({
         ...progressBarStyle,
         top: (height - customStyles.separatorStrokeWidth) / 2,
         left: width / (2 * stepCount),
-        right: width / (2 * stepCount),
+        // right: width / (2 * stepCount),
         height:
           customStyles.separatorStrokeFinishedWidth === 0
             ? customStyles.separatorStrokeWidth
             : customStyles.separatorStrokeFinishedWidth,
-        width: progressAnim,
+        width: 24,
+        borderRadiusAnim: 4
       };
     }
     return <Animated.View style={progressBarStyle} />;
